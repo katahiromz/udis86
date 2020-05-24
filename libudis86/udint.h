@@ -76,7 +76,7 @@
 #ifdef FMT64
 # undef FMT64
 #endif
-#if defined(_MSC_VER) || defined(__BORLANDC__)
+#if defined(_WIN32)
 # define FMT64 "I64"
 #else
 # if defined(__APPLE__)
@@ -89,7 +89,7 @@
 #endif
 
 /* define an inline macro */
-#if defined(_MSC_VER) || defined(__BORLANDC__)
+#if defined(_WIN32)
 # define UD_INLINE __inline /* MS Visual Studio requires __inline
                                instead of inline for C code */
 #else

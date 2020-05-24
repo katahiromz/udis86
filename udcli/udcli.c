@@ -27,7 +27,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#ifdef _MSC_VER
+#ifdef _WIN32
 #include "..\udis86.h"
 #define PACKAGE_STRING "udis86 pre-1.8"
 #else
