@@ -5,7 +5,7 @@ if(HAVE_STRING_H)
     add_definitions(-DHAVE_STRING_H)
 endif()
 
-set(OPTABLE ../docs/x86/optable.xml)
+set(OPTABLE ${CMAKE_CURRENT_SOURCE_DIR}/../docs/x86/optable.xml)
 
 add_library(udis86 STATIC
     itab.c
@@ -18,7 +18,7 @@ add_library(udis86 STATIC
 add_custom_command(
     OUTPUT itab.c itab.h
     COMMAND ${PYTHON}
-    ARGS ../scripts/ud_itab.py ${OPTABLE} ../libudis86
+    ARGS ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/ud_itab.py ${OPTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/../libudis86
     DEPENDS
         ${OPTABLE}
         ../scripts/ud_itab.py
