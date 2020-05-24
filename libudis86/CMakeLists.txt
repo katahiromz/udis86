@@ -17,7 +17,7 @@ add_library(udis86 STATIC
 target_include_directories(udis86 PRIVATE ${CMAKE_BINARY_DIR} .)
 
 add_custom_command(
-    OUTPUT itab.c itab.h
+    OUTPUT ${CMAKE_BINARY_DIR}/itab.c ${CMAKE_BINARY_DIR}/itab.h
     COMMAND ${PYTHON}
     ARGS ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/ud_itab.py ${OPTABLE} ${CMAKE_BINARY_DIR}
     DEPENDS
