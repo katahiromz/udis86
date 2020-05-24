@@ -28,6 +28,6 @@
 
 #include "libudis86/types.h"
 #include "libudis86/extern.h"
-#include "libudis86/itab.h"
+#include "itab.h"
 
 #endif
