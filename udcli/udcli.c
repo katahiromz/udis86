@@ -32,7 +32,9 @@
 #define PACKAGE_STRING "udis86 pre-1.8"
 #else
 #include <udis86.h>
-#include <config.h>
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
 #endif
 
 #if defined(__APPLE__)

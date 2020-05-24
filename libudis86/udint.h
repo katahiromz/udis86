@@ -29,7 +29,7 @@
 #include "types.h"
 
 #ifdef HAVE_CONFIG_H
-# include <config.h>
+# include "config.h"
 #endif /* HAVE_CONFIG_H */
 
 #if defined(UD_DEBUG) && HAVE_ASSERT_H
