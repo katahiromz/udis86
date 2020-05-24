@@ -8,18 +8,18 @@ endif()
 set(OPTABLE ${CMAKE_CURRENT_SOURCE_DIR}/../docs/x86/optable.xml)
 
 add_library(udis86 STATIC
-    ${CMAKE_CURRENT_BINARY_DIR}/itab.c
+    ${CMAKE_BINARY_DIR}/itab.c
     decode.c
     syn.c
     syn-intel.c
     syn-att.c
     udis86.c)
-target_include_directories(udis86 PRIVATE ${CMAKE_CURRENT_BINARY_DIR} .)
+target_include_directories(udis86 PRIVATE ${CMAKE_BINARY_DIR} .)
 
 add_custom_command(
     OUTPUT itab.c itab.h
     COMMAND ${PYTHON}
-    ARGS ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/ud_itab.py ${OPTABLE} ${CMAKE_CURRENT_BINARY_DIR}
+    ARGS ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/ud_itab.py ${OPTABLE} ${CMAKE_BINARY_DIR}
     DEPENDS
         ${OPTABLE}
         ../scripts/ud_itab.py
