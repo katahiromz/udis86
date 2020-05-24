@@ -21,5 +21,5 @@ add_custom_command(
     ARGS ${CMAKE_CURRENT_SOURCE_DIR}/scripts/ud_itab.py ${OPTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/libudis86
     DEPENDS
         ${OPTABLE}
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts/ud_itab.py
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts/ud_opcode.py)
+        ../scripts/ud_itab.py
+        ../scripts/ud_opcode.py)
