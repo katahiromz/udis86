@@ -29,12 +29,15 @@
 #include <ctype.h>
 #ifdef _WIN32
 #include "..\udis86.h"
-#define PACKAGE_STRING "udis86 pre-1.8"
 #else
 #include <udis86.h>
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
+#endif
+
+#ifndef PACKAGE_STRING
+#define PACKAGE_STRING "udis86 pre-1.8"
 #endif
 
 #if defined(__APPLE__)
