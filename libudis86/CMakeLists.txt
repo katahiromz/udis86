@@ -14,7 +14,7 @@ add_library(udis86 STATIC
     syn-intel.c
     syn-att.c
     udis86.c)
-target_include_directories(udis86 PRIVATE ${CMAKE_CURRENT_BINARY} .)
+target_include_directories(udis86 PRIVATE ${CMAKE_CURRENT_BINARY_DIR} .)
 
 add_custom_command(
     OUTPUT itab.c itab.h
