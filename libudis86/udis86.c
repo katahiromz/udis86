@@ -29,7 +29,7 @@
 #include "decode.h"
 
 #if !defined(__UD_STANDALONE__)
-# if HAVE_STRING_H
+# ifdef HAVE_STRING_H
 #  include <string.h>
 # endif
 #endif /* !__UD_STANDALONE__ */
