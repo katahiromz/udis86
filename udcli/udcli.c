@@ -211,7 +211,7 @@ int main(int argc, char **argv)
 
   if (o_skip) {
 	o_count += o_skip;
-	ud_input_skip(&ud_obj, o_skip);
+	ud_input_skip(&ud_obj, (size_t)o_skip);
   }
 
   /* disassembly loop */
