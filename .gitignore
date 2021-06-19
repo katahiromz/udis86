@@ -79,3 +79,6 @@ CMakeFiles
 lib*.a
 *.exe
 a.*
+*.vcxproj
+*.filters
+*.sln
